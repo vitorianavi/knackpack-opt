@@ -1,32 +1,33 @@
 #include <ilcplex/ilocplex.h>
-ILOSTLBEGIN
-int
-main (int argc, char **argv)
-{
-IloEnv env;
-try {
-IloModel model(env);
-IloNumVarArray vars(env);
-vars.add(IloNumVar(env, 0.0, 40.0));
-vars.add(IloNumVar(env));
-vars.add(IloNumVar(env));
-model.add(IloMaximize(env, vars[0]+2* vars[1]+3* vars[2]));
-model.add( - vars[0] + vars[1] + vars[2] <= 20);
-model.add( vars[0]-3* vars[1] + vars[2] <= 30);
-IloCplex cplex(model);
-if ( !cplex.solve() ) {
-env.error() << "Failed to optimize LP." << endl;
-throw(-1);
-}
-IloNumArray vals(env);
-env.out() << "Solution status = " << cplex.getStatus() << endl;
-env.out() << "Solution value = " << cplex.getObjValue() << endl;
-cplex.getValues(vals, vars);
-env.out() << "Values = " << vals << endl;
-}
-catch (IloException& e) {
-cerr << "Concert exception caught: " << e << endl;
-}
-catch (...) {
-cerr << "Unknown exception caught" << endl;
+#include <cstdio>
+
+int main() {
+	IloEnv env;
+	try {
+		IloNumVarArray x(env, 4, 0, IloInfinity, ILOFLOAT);
+		IloModel model(env);
+		model.add(IloMaximize(env, 150 * x[0] + 500 * x[1] + 400 * x[2] + 200 * x[3]));
+		model.add(x[0] + 4 * x[1] + 3 * x[2] + x[3] <= 50);
+		model.add(x[0] + x[1] + x[2] + 2 * x[3] <= 75);
+		IloCplex cplex(model);
+		bool status;
+		IloNumArray sol(env);
+		status = cplex.solve();
+		
+		if(status == true){
+			cplex.getValues(sol, x);
+			printf("Funcao objetivo = %.2lf\n\n", cplex.getObjValue());
+			printf("x0 = %.2lf\n", sol[0]);
+			printf("x1 = %.2lf\n", sol[1]);
+			printf("x2 = %.2lf\n", sol[2]);
+			printf("x3 = %.2lf\n", sol[3]);
+		}
+		else{
+			printf("Erro ao resolver!\n");
+		}
+		env.end();
+	}
+	catch (IloException& ex) {
+		std::cout << "Erro: " << ex << std::endl;
+	}
 }
