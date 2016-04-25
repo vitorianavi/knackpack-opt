@@ -1,2 +1,0 @@
-/home/anavi/Dropbox/UFAM/Graduação/IOC/knapotatosack/build/CMakeFiles/bb.dir
-/home/anavi/Dropbox/UFAM/Graduação/IOC/knapotatosack/build/CMakeFiles/bc.dir

@@ -1,0 +1,151 @@
+Tried aggregator 1 time.
+LP Presolve eliminated 0 rows and 1 columns.
+Reduced LP has 1 rows, 6 columns, and 6 nonzeros.
+Presolve time = 0.00 sec. (0.00 ticks)
+
+Iteration log . . .
+Iteration:     1   Dual objective     =           107.550000
+Tried aggregator 1 time.
+LP Presolve eliminated 1 rows and 2 columns.
+Reduced LP has 1 rows, 5 columns, and 5 nonzeros.
+Presolve time = 0.00 sec. (0.00 ticks)
+
+Iteration log . . .
+Iteration:     1   Dual objective     =           107.526316
+Tried aggregator 1 time.
+LP Presolve eliminated 2 rows and 3 columns.
+Reduced LP has 1 rows, 4 columns, and 4 nonzeros.
+Presolve time = 0.00 sec. (0.00 ticks)
+
+Iteration log . . .
+Iteration:     1   Dual objective     =           105.333333
+Tried aggregator 1 time.
+LP Presolve eliminated 4 rows and 7 columns.
+All rows and columns eliminated.
+Presolve time = 0.00 sec. (0.00 ticks)
+
+obj9 = (70 * IloNumVar(0)[0..1]  + 20 * IloNumVar(1)[0..1]  + 39 * IloNumVar(2)[0..1]  + 37 * IloNumVar(3)[0..1]  + 7 * IloNumVar(4)[0..1]  + 5 * IloNumVar(5)[0..1]  + 10 * IloNumVar(6)[0..1] , IloObjective, Maximize);
+
+
+31 * IloNumVar(0)[0..1]  + 10 * IloNumVar(1)[0..1]  + 20 * IloNumVar(2)[0..1]  + 19 * IloNumVar(3)[0..1]  + 4 * IloNumVar(4)[0..1]  + 3 * IloNumVar(5)[0..1]  + 6 * IloNumVar(6)[0..1]  <= 50 
+
+IloNumVar(2)[0..1]  <= 0 
+
+IloNumVar(3)[0..1]  <= 0 
+
+IloNumVar(6)[0..1]  <= 0 
+
+objetivo = 102.000000
+x0 = 1.000000
+x1 = 1.000000
+x2 = 0.000000
+x3 = 0.000000
+x4 = 1.000000
+x5 = 1.000000
+x6 = 0.000000
+Tried aggregator 1 time.
+LP Presolve eliminated 3 rows and 3 columns.
+Reduced LP has 1 rows, 4 columns, and 4 nonzeros.
+Presolve time = 0.00 sec. (0.00 ticks)
+
+Iteration log . . .
+Iteration:     1   Dual objective     =           105.250000
+Tried aggregator 1 time.
+LP Presolve eliminated 5 rows and 7 columns.
+All rows and columns eliminated.
+Presolve time = 0.00 sec. (0.00 ticks)
+
+obj9 = (70 * IloNumVar(0)[0..1]  + 20 * IloNumVar(1)[0..1]  + 39 * IloNumVar(2)[0..1]  + 37 * IloNumVar(3)[0..1]  + 7 * IloNumVar(4)[0..1]  + 5 * IloNumVar(5)[0..1]  + 10 * IloNumVar(6)[0..1] , IloObjective, Maximize);
+
+
+31 * IloNumVar(0)[0..1]  + 10 * IloNumVar(1)[0..1]  + 20 * IloNumVar(2)[0..1]  + 19 * IloNumVar(3)[0..1]  + 4 * IloNumVar(4)[0..1]  + 3 * IloNumVar(5)[0..1]  + 6 * IloNumVar(6)[0..1]  <= 50 
+
+IloNumVar(2)[0..1]  <= 0 
+
+IloNumVar(3)[0..1]  <= 0 
+
+1 <= IloNumVar(6)[0..1]  
+
+IloNumVar(4)[0..1]  <= 0 
+
+objetivo = 105.000000
+x0 = 1.000000
+x1 = 1.000000
+x2 = 0.000000
+x3 = 0.000000
+x4 = 0.000000
+x5 = 1.000000
+x6 = 1.000000
+Tried aggregator 1 time.
+LP Presolve eliminated 4 rows and 4 columns.
+Reduced LP has 1 rows, 3 columns, and 3 nonzeros.
+Presolve time = 0.00 sec. (0.00 ticks)
+
+Iteration log . . .
+Iteration:     1   Dual objective     =           105.000000
+Tried aggregator 1 time.
+LP Presolve eliminated 6 rows and 7 columns.
+All rows and columns eliminated.
+Presolve time = 0.00 sec. (0.00 ticks)
+
+obj9 = (70 * IloNumVar(0)[0..1]  + 20 * IloNumVar(1)[0..1]  + 39 * IloNumVar(2)[0..1]  + 37 * IloNumVar(3)[0..1]  + 7 * IloNumVar(4)[0..1]  + 5 * IloNumVar(5)[0..1]  + 10 * IloNumVar(6)[0..1] , IloObjective, Maximize);
+
+
+31 * IloNumVar(0)[0..1]  + 10 * IloNumVar(1)[0..1]  + 20 * IloNumVar(2)[0..1]  + 19 * IloNumVar(3)[0..1]  + 4 * IloNumVar(4)[0..1]  + 3 * IloNumVar(5)[0..1]  + 6 * IloNumVar(6)[0..1]  <= 50 
+
+IloNumVar(2)[0..1]  <= 0 
+
+IloNumVar(3)[0..1]  <= 0 
+
+1 <= IloNumVar(6)[0..1]  
+
+1 <= IloNumVar(4)[0..1]  
+
+IloNumVar(1)[0..1]  <= 0 
+
+objetivo = 92.000000
+x0 = 1.000000
+x1 = 0.000000
+x2 = 0.000000
+x3 = 0.000000
+x4 = 1.000000
+x5 = 1.000000
+x6 = 1.000000
+Tried aggregator 1 time.
+LP Presolve eliminated 6 rows and 7 columns.
+All rows and columns eliminated.
+Presolve time = 0.00 sec. (0.00 ticks)
+Tried aggregator 1 time.
+LP Presolve eliminated 7 rows and 7 columns.
+All rows and columns eliminated.
+Presolve time = 0.00 sec. (0.00 ticks)
+
+obj9 = (70 * IloNumVar(0)[0..1]  + 20 * IloNumVar(1)[0..1]  + 39 * IloNumVar(2)[0..1]  + 37 * IloNumVar(3)[0..1]  + 7 * IloNumVar(4)[0..1]  + 5 * IloNumVar(5)[0..1]  + 10 * IloNumVar(6)[0..1] , IloObjective, Maximize);
+
+
+31 * IloNumVar(0)[0..1]  + 10 * IloNumVar(1)[0..1]  + 20 * IloNumVar(2)[0..1]  + 19 * IloNumVar(3)[0..1]  + 4 * IloNumVar(4)[0..1]  + 3 * IloNumVar(5)[0..1]  + 6 * IloNumVar(6)[0..1]  <= 50 
+
+IloNumVar(2)[0..1]  <= 0 
+
+IloNumVar(3)[0..1]  <= 0 
+
+1 <= IloNumVar(6)[0..1]  
+
+1 <= IloNumVar(4)[0..1]  
+
+1 <= IloNumVar(1)[0..1]  
+
+IloNumVar(0)[0..1]  <= 0 
+
+objetivo = 42.000000
+x0 = 0.000000
+x1 = 1.000000
+x2 = 0.000000
+x3 = 0.000000
+x4 = 1.000000
+x5 = 1.000000
+x6 = 1.000000
+Row 'c1' infeasible, all entries at implied bounds.
+Presolve time = 0.00 sec. (0.00 ticks)
+Erro: CPLEX Error  1217: No solution exists.
+
