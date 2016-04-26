@@ -55,22 +55,13 @@ IloCplex *branchBound(IloEnv env, IloCplex& cplex, IloModel model, IloNumVarArra
 			problem1 = branchBound(env, *problem1, model_aux1, x);
 			problem2 = branchBound(env, *problem2, model_aux2, x);
 
-			if(problem1) {
-				if(problem2) {
-					if(problem1->getObjValue() > problem2->getObjValue()) {
-						maior_atual = problem1->getObjValue();
-						return problem1;
-					} else {
-						maior_atual = problem2->getObjValue();
-						return problem2;
-					}
-				} else {
-					maior_atual = problem1->getObjValue();
-					return problem1;
-				}
-			} else if(problem2) {
+			if(problem2) {
 				maior_atual = problem2->getObjValue();
 				return problem2;
+
+			} else if(problem1) {
+				maior_atual = problem1->getObjValue();
+				return problem1;
 			}
 
 		} else {
