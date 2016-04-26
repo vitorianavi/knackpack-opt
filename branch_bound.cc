@@ -55,14 +55,10 @@ IloCplex *branchBound(IloEnv env, IloCplex& cplex, IloModel model, IloNumVarArra
 			problem1 = branchBound(env, *problem1, model_aux1, x);
 			problem2 = branchBound(env, *problem2, model_aux2, x);
 
-			if(problem2) {
-				maior_atual = problem2->getObjValue();
+			if(problem2) 
 				return problem2;
-
-			} else if(problem1) {
-				maior_atual = problem1->getObjValue();
+			else if(problem1)
 				return problem1;
-			}
 
 		} else {
 			if(cplex.getObjValue() > maior_atual) {
@@ -87,14 +83,14 @@ int main() {
 		IloCplex *problem = new IloCplex(model);
 		problem = branchBound(env, *problem, model, x);
 
-		printf("----------FINAL----------\n\n");
+		printf("\n----------FINAL----------\n");
 
-		printf("%f\n", maior_atual);
+		printf("Funçao objetivo: %d\n", (int) maior_atual);
 
 		problem->getValues(sol, x);
 		printf("----------Soluçao---------\n");
 		for(int i = 0; i < N_VAR; i++) {
-			printf("x%d = %lf\n", i, sol[i]);
+			printf("x%d = %d\n", i, (int)sol[i]);
 		}
 		env.end();
 	}
