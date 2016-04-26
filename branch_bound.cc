@@ -1,5 +1,6 @@
 #include <ilcplex/ilocplex.h>
 #include <cstdio>
+#include <cplexx.h>
 
 #define N_VAR 7
 
@@ -34,8 +35,11 @@ IloCplex *branchBound(IloEnv env, IloCplex& cplex, IloModel model, IloNumVarArra
 	IloCplex *problem1, *problem2;
 	IloModel model_aux1(env), model_aux2(env);
 	IloNumArray sol(env);
+	CPXDIM *head;
 
 	status = cplex.solve();
+	aux = CPXXgetbhead(env, model, *head, x);
+
 	if(status) {
 		cplex.getValues(sol, x);
 		index = isIntegerSolutions(sol);
