@@ -58,12 +58,13 @@ CCFLAGS = $(CCOPT) -I$(CPLEXINCDIR) -I$(CONCERTINCDIR)
 #  make execute  : to compile and execute the examples.
 #------------------------------------------------------------
 
-CPP_EX = branch_bound
+CPP_EX = branch_bound branch_cut
 
 all_cpp: $(CPP_EX)
 
 execute_cpp: $(CPP_EX)
 	 ./branch_bound
+	 ./branch_cut
 
 # ------------------------------------------------------------
 
@@ -80,6 +81,11 @@ branch_bound: branch_bound.o
 	$(CCC) $(CCFLAGS) $(CCLNDIRS) -o branch_bound branch_bound.o $(CCLNFLAGS)
 branch_bound.o: ../branch_bound.cc
 	$(CCC) -c $(CCFLAGS) ../branch_bound.cc -o branch_bound.o
+
+branch_cut: branch_cut.o
+	$(CCC) $(CCFLAGS) $(CCLNDIRS) -o branch_cut branch_cut.o $(CCLNFLAGS)
+branch_cut.o: ../branch_cut.cc
+	$(CCC) -c $(CCFLAGS) ../branch_cut.cc -o branch_cut.o
 
 # Local Variables:
 # mode: makefile
